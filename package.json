@@ -1,0 +1,23 @@
+{
+  "name": "cypress-qa",
+  "version": "1.0.0",
+  "description": "Cypress QA automation project",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:headed": "cypress run --headed",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "qa",
+    "automation",
+    "testing"
+  ],
+  "author": "shivajik1995",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.0"
+  }
+}
