@@ -37,10 +37,35 @@ npm run cypress:run
 npm run cypress:run:headed
 ```
 
+### Run Tests with Environment Files
+```bash
+npm run cypress:run:qa
+npm run cypress:run:demo
+npm run cypress:run:orangehrm
+```
+
+### Open Cypress with Environment Files
+```bash
+npm run cypress:open:qa
+npm run cypress:open:demo
+npm run cypress:open:orangehrm
+```
+
+### Custom command-line usage
+```bash
+npm run cypress:run -- --env configFile=qa
+npm run cypress:run -- --env configFile=demo
+```
+
+> Use `npm run cypress:run:orangehrm` as an alias for `npm run cypress:run -- --env configFile=qa`
+
 ## Project Structure
 
 ```
 cypress-qa/
+├── config/                 # Environment config files
+│   ├── cypress.env.qa.json
+│   └── cypress.env.demo.json
 ├── cypress/
 │   ├── e2e/                 # Test files (.cy.js)
 │   ├── support/

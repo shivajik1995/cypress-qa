@@ -5,9 +5,15 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
+    "cypress-open-qa": "npm run cypress:open -- --env configFile=qa",
+    "cypress-open-demo": "npm run cypress:open -- --env configFile=demo",
+    "cypress-open-orangehrm": "npm run cypress:open -- --env configFile=qa",
     "cypress:run": "cypress run",
-    "cypress:run:headed": "cypress run --headed",
-    "test": "cypress run"
+    "cypress:run:qa": "npm run cypress:run -- --env configFile=qa",
+    "cypress:run:demo": "npm run cypress:run -- --env configFile=demo",
+    "cypress:run:orangehrm": "npm run cypress:run -- --env configFile=qa",
+    "cypress:run:headed": "npm run cypress:run -- --headed",
+    "test": "npm run cypress:run"
   },
   "keywords": [
     "cypress",
@@ -18,6 +24,10 @@
   "author": "shivajik1995",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^13.6.0"
+    "cypress": "^15.16.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "openai": "^6.39.1"
   }
 }
